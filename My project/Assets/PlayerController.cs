@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public WeapownData weapownData;
+
     float rotateSpd = 10f;
     public float movespd = 10f;
     public float gravity = -9.8f;
