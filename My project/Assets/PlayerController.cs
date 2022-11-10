@@ -16,11 +16,13 @@ public class PlayerController : MonoBehaviour
 
     CharacterController characterController;
     PlayerData playerData;
+    ItemParming itemParm;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
         playerData = GetComponent<PlayerData>();
+        itemParm = GetComponent<ItemParming>();
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        itemParm.ItemSearch();
 
         Jump();
         Debug.Log(characterController.isGrounded);
